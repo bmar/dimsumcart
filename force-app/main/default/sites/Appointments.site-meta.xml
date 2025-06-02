@@ -23,8 +23,8 @@
     <masterLabel>Appointments</masterLabel>
     <redirectToCustomDomain>true</redirectToCustomDomain>
     <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
-    <siteAdmin>crmsupport@lilikoiagency.com.cmk.initnosms</siteAdmin>
-    <siteGuestRecordDefaultOwner>crmsupport@lilikoiagency.com.cmk.initnosms</siteGuestRecordDefaultOwner>
+    <siteAdmin>crmsupport@lilikoiagency.com.cmk</siteAdmin>
+    <siteGuestRecordDefaultOwner>crmsupport@lilikoiagency.com.cmk</siteGuestRecordDefaultOwner>
     <siteIframeWhiteListUrls>
         <url>https://lilikoiagency.com</url>
     </siteIframeWhiteListUrls>

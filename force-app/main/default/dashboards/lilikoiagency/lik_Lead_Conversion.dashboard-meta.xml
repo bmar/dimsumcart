@@ -635,8 +635,8 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <owner>crmsupport@lilikoiagency.com.cmk.initnosms</owner>
-    <runningUser>crmsupport@lilikoiagency.com.cmk.initnosms</runningUser>
+    <owner>crmsupport@lilikoiagency.com.cmk</owner>
+    <runningUser>crmsupport@lilikoiagency.com.cmk</runningUser>
     <textColor>#000000</textColor>
     <title>lik Lead Conversion</title>
     <titleColor>#000000</titleColor>
