@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Down_Payment_After_CONTRACT_OUT</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  OR(
+    NOT(ISBLANK( Initial_Won_Amount__c )),
+    TEXT( StageName ) = &apos;CONTRACT SIGNED&apos;,
+    TEXT( StageName ) = &apos;Closed Won&apos;,
+    TEXT( StageName ) = &apos;CHANGE ORDER&apos;
+  ),
+  ISCHANGED( Down_Payment__c )
+)</errorConditionFormula>
+    <errorDisplayField>Down_Payment__c</errorDisplayField>
+    <errorMessage>Cannot change Down Payment Amount after contract is out</errorMessage>
+</ValidationRule>

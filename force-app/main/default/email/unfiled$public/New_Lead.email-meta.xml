@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>New Lead</name>
+    <style>none</style>
+    <subject>CMK Construction: Book your appointment</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+This is Carrie from CMK Construction, Tampa’s number one remodeling experts. We’ve been voted 5 years in a row by Best of the Best Tampa Bay! Thank you for your trust on your project. Please click on the link below to schedule your personalized consultation. We’re required to meet with both homeowners, if applicable. We look forward to exceeding your expectations!
+
+Click here: https://cmkconstructioninc--dev.sandbox.my.salesforce-sites.com/appointments/?locate={!Lead.Id}
+
+Thanks,
+Carrie Marie
+
+
+ref: {!Lead.Id}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,19 @@
+The customer has booked an appointment.
+
+Please find the details below.
+
+Name: {!Lead.FirstName} {!Lead.LastName}
+
+Address: {!Lead.Street} {!Lead.City} {!Lead.PostalCode}
+
+Product Type: {!Lead.Product_Type__c}
+
+Appointment Date: {!Lead.Appointment_Date__c}
+
+Appointment Time: {!Lead.Appointment_Time__c}
+
+Click here to open the lead in Salesforce: https://cmkconstructioninc.lightning.force.com/lightning/r/Lead/{!Lead.Id}/view
+
+Thanks
+CMK Construction Inc.
+ref:{!Lead.Id}

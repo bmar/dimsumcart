@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Two_Leg_Requires_2nd_Name</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+   TEXT(Expected_Attendees__c) = &apos;TWO LEG&apos;,
+   ISBLANK( FirstName2__c )
+)</errorConditionFormula>
+    <errorDisplayField>FirstName2__c</errorDisplayField>
+    <errorMessage>Two Leg appointments require the first name of the second homeowner at a minimum</errorMessage>
+</ValidationRule>

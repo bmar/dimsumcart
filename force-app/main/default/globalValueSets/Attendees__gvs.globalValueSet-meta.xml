@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ONE LEG</fullName>
+        <default>false</default>
+        <label>ONE LEG</label>
+    </customValue>
+    <customValue>
+        <fullName>TWO LEG</fullName>
+        <default>false</default>
+        <label>TWO LEG</label>
+    </customValue>
+    <customValue>
+        <fullName>SINGLE HOMEOWNER</fullName>
+        <default>false</default>
+        <label>SINGLE HOMEOWNER</label>
+    </customValue>
+    <customValue>
+        <fullName>SALES REP SHOWED - CUSTOMER DID NOT</fullName>
+        <default>false</default>
+        <label>SALES REP SHOWED - CUSTOMER DID NOT</label>
+    </customValue>
+    <customValue>
+        <fullName>CUSTOMER SHOWED - SALES REP DID NOT</fullName>
+        <default>false</default>
+        <label>CUSTOMER SHOWED - SALES REP DID NOT</label>
+    </customValue>
+    <customValue>
+        <fullName>SALES REP SHOWED - DID NOT PRESENT</fullName>
+        <default>false</default>
+        <label>SALES REP SHOWED - DID NOT PRESENT</label>
+    </customValue>
+    <masterLabel>Attendees</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,102 @@
+Component Failures [7]
+┌──────────────────┬───────────────────────────────────────────────┬───────────────────────────────────────────────┬─────────────┐
+│ Type             │ Name                                          │ Problem                                       │ Line:Column │
+├──────────────────┼───────────────────────────────────────────────┼───────────────────────────────────────────────┼─────────────┤
+│ PermissionSet    │ Apex                                          │ In field: apexPage - no ApexPage named        │             │
+│                  │                                               │ ThankYouPage found                            │             │
+│ CustomSite       │ Appointments                                  │ Cannot find a user that matches any of the    │             │
+│                  │                                               │ following usernames: okx3eamcrmsupport@liliko │             │
+│                  │                                               │ iagency.com.cmk.port.initnosms,               │             │
+│                  │                                               │ 00efk0000006Hm9crmsupport@lilikoiagency.com.c │             │
+│                  │                                               │ mk.port.com.initnosms, crmsupport@lilikoiagen │             │
+│                  │                                               │ cy.com.cmk.port.initnosms,                    │             │
+│                  │                                               │ crmsupport@lilikoiagency.com.cmk.port; remove │             │
+│                  │                                               │ the user from the component being deployed or │             │
+│                  │                                               │ create a matching user in the destination     │             │
+│                  │                                               │ organization.                                 │             │
+│ Profile          │ CMK Standard User                             │ In field: apexPage - no ApexPage named        │             │
+│                  │                                               │ ThankYouPage found                            │             │
+│ SharingGuestRule │ Location.Share_Sales_Territory                │ Specify a guest user’s nickname for the       │ 3:24        │
+│                  │                                               │ guestUser field. (3:24)                       │             │
+│ Dashboard        │ lilikoiagency/Project_Specialists_Closing_MTD │ Cannot find a user that matches any of the    │             │
+│                  │                                               │ following usernames: crmsupport@lilikoiagency │             │
+│                  │                                               │ .com.cmk.dev2.initnosms,                      │             │
+│                  │                                               │ crmsupport@lilikoiagency.com.cmk.dev2,        │             │
+│                  │                                               │ 00efk0000006Hm9crmsupport@lilikoiagency.com.c │             │
+│                  │                                               │ mk.dev2.com.initnosms, okx3eamcrmsupport@lili │             │
+│                  │                                               │ koiagency.com.cmk.dev2.initnosms; remove the  │             │
+│                  │                                               │ user from the component being deployed or     │             │
+│                  │                                               │ create a matching user in the destination     │             │
+│                  │                                               │ organization.                                 │             │
+│ Dashboard        │ lilikoiagency/Speed_to_Lead                   │ Cannot find a user that matches any of the    │             │
+│                  │                                               │ following usernames: crmsupport@lilikoiagency │             │
+│                  │                                               │ .com.cmk.dev2.initnosms,                      │             │
+│                  │                                               │ crmsupport@lilikoiagency.com.cmk.dev2,        │             │
+│                  │                                               │ 00efk0000006Hm9crmsupport@lilikoiagency.com.c │             │
+│                  │                                               │ mk.dev2.com.initnosms, okx3eamcrmsupport@lili │             │
+│                  │                                               │ koiagency.com.cmk.dev2.initnosms; remove the  │             │
+│                  │                                               │ user from the component being deployed or     │             │
+│                  │                                               │ create a matching user in the destination     │             │
+│                  │                                               │ organization.                                 │             │
+│ Dashboard        │ lilikoiagency/lik_Lead_Conversion             │ Cannot find a user that matches any of the    │             │
+│                  │                                               │ following usernames: crmsupport@lilikoiagency │             │
+│                  │                                               │ .com.cmk.dev2.initnosms,                      │             │
+│                  │                                               │ crmsupport@lilikoiagency.com.cmk.dev2,        │             │
+│                  │                                               │ 00efk0000006Hm9crmsupport@lilikoiagency.com.c │             │
+│                  │                                               │ mk.dev2.com.initnosms, okx3eamcrmsupport@lili │             │
+│                  │                                               │ koiagency.com.cmk.dev2.initnosms; remove the  │             │
+│                  │                                               │ user from the component being deployed or     │             │
+│                  │                                               │ create a matching user in the destination     │             │
+│                  │                                               │ organization.                                 │             │
+└──────────────────┴───────────────────────────────────────────────┴───────────────────────────────────────────────┴─────────────┘
+
+
+Component Failures [32]
+┌──────────────────┬────────────────────────────────────────────────────────────┬──────────────────────────────────┬─────────────┐
+│ Type             │ Name                                                       │ Problem                          │ Line:Column │
+├──────────────────┼────────────────────────────────────────────────────────────┼──────────────────────────────────┼─────────────┤
+│ PermissionSet    │ Apex                                                       │ In field: apexPage - no ApexPage │             │
+│                  │                                                            │ named ThankYouPage found         │             │
+│ CustomSite       │ Appointments                                               │ In field: siteAdmin - no User    │             │
+│                  │                                                            │ named crmsupport@lilikoiagency.c │             │
+│                  │                                                            │ om.cmk.port found                │             │
+│ PermissionSet    │ Audit                                                      │ Unknown user permission:         │             │
+│                  │                                                            │ CreateAuditFields                │             │
+│ Profile          │ CMK Standard User                                          │ In field: apexPage - no ApexPage │             │
+│                  │                                                            │ named AnswersHome found          │             │
+│ PathAssistant    │ Default_Opportunity                                        │ Cannot insert Path Assistant     │             │
+│                  │                                                            │ Step Item: Picklist value is not │             │
+│                  │                                                            │ supported                        │             │
+│ SharingGuestRule │ Location.Share_Sales_Territory                             │ Cannot create: SharingGuestRule  │ 3:24        │
+│                  │                                                            │ in this organization (3:24)      │             │
+│ Layout           │ Opportunity-CMK Opportunity                                │ Invalid field:MemberName in      │             │
+│                  │                                                            │ related                          │             │
+│                  │                                                            │ list:RelatedOpportunitySalesTeam │             │
+│ Layout           │ Opportunity-CMK Opportunity Partner                        │ Invalid field:MemberName in      │             │
+│                  │                                                            │ related                          │             │
+│                  │                                                            │ list:RelatedOpportunitySalesTeam │             │
+│ Report           │ lilikoiagency/Closing_Month_To_Date_V9m                    │ Cannot find folder:lilikoiagency │             │
+│ Dashboard        │ lilikoiagency/Project_Specialists_Closing_MTD              │ Cannot find folder:lilikoiagency │             │
+│ Dashboard        │ lilikoiagency/Speed_to_Lead                                │ Cannot find folder:lilikoiagency │             │
+│ Dashboard        │ lilikoiagency/lik_Lead_Conversion                          │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Lead_First_Modified_Normalized_eiM       │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Lead_First_Modified_gmu                  │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Lead_Uncontacted_PM3                     │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Lead_Updated_oOd                         │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_Converted_MTD_By_Location_lqX      │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_Converted_Today_By_Location_SbU    │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_Converted_YTD_By_Locat_nPP         │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_Converted_Yesterday_By_Locatio_jPd │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_Danielle_Converted_MTD_Fpk         │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_Danielle_Converted_MTD_t5u         │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_Danielle_Converted_Today_Amk       │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_Danielle_Converted_Yesterday_CsA   │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_Events_Converted_MTD_srj           │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_Events_Converted_Today_RTq         │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_Events_Converted_YTD_2MH           │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_Events_Converted_Yesterday_pky     │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_MTD_By_Location_afa                │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_Today_By_Location_J5N              │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_YTD_By_Location_usz                │ Cannot find folder:lilikoiagency │             │
+│ Report           │ lilikoiagency/lik_Leads_Yesterday_By_Location_OoT          │ Cannot find folder:lilikoiagency │             │
+└──────────────────┴────────────────────────────────────────────────────────────┴──────────────────────────────────┴─────────────┘

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Attempt_Sequence</fullName>
+    <active>true</active>
+    <errorConditionFormula>(LEFT(TEXT( Lead_Contact_Attempt__c ),1) &amp; MID(TEXT( Lead_Contact_Attempt__c ),11,1))&lt;(LEFT(TEXT( PRIORVALUE(Lead_Contact_Attempt__c) ),1) &amp; MID(TEXT(  PRIORVALUE(Lead_Contact_Attempt__c) ),11,1))</errorConditionFormula>
+    <errorMessage>Attempt status must follow sequence</errorMessage>
+</ValidationRule>

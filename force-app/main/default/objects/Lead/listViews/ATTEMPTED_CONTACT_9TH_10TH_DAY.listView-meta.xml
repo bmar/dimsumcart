@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATTEMPTED_CONTACT_9TH_10TH_DAY</fullName>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.MOBILE_PHONE</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>Lead_Contact_Attempt__c</columns>
+    <columns>Contact_Attempts__c</columns>
+    <columns>Call_Center_Notes__c</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Lead_Source_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>notEqual</operation>
+        <value>LEADS CONNECT BOOKED</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>ATTEMPTED CONTACT</value>
+    </filters>
+    <filters>
+        <field>Lead_Contact_Attempt__c</field>
+        <operation>equals</operation>
+        <value>9TH DAY X1,9TH DAY X2,9TH DAY X3,10TH DAY X1,10TH DAY X2,10TH DAY X3</value>
+    </filters>
+    <label>ATTEMPTED CONTACT 9TH - 10TH DAY</label>
+</ListView>

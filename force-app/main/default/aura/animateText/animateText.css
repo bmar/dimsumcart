@@ -1,0 +1,46 @@
+.THIS {
+    width: 100%;
+    line-height: 2rem;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+    display: none;
+}
+.green.THIS {
+    background-color: #22683e;
+    display: block;
+}
+
+.blue.THIS {
+    background-color: #014486;
+    display: block;
+}
+
+.yellow.THIS {
+    background-color: #d79304;
+    display: block;
+}
+
+.orange.THIS {
+    background-color: #ff5d2d;
+    display: block;
+}
+
+.red.THIS {
+    background-color: #BA0517;
+    display: block;
+}
+ 
+.THIS p {
+    display: inline-block;
+    animation: pulsate 3.5s ease-in-out infinite;
+    font-size:1.5rem;
+}
+ 
+@keyframes pulsate {
+    0%   { transform: scale(1.0) }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1.0); }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CALL</fullName>
+        <default>false</default>
+        <label>CALL</label>
+    </customValue>
+    <customValue>
+        <fullName>TEXT</fullName>
+        <default>false</default>
+        <label>TEXT</label>
+    </customValue>
+    <customValue>
+        <fullName>EMAIL</fullName>
+        <default>false</default>
+        <label>EMAIL</label>
+    </customValue>
+    <customValue>
+        <fullName>ALL</fullName>
+        <default>false</default>
+        <label>ALL</label>
+    </customValue>
+    <masterLabel>Best Way To Reach You</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

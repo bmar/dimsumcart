@@ -1,0 +1,47 @@
+<!--
+  @description       : 
+  @author            : Bradford Mar
+  @group             : 
+  @last modified on  : 04-28-2023
+  @last modified by  : Bradford Mar
+-->
+<apex:page showHeader="false" sidebar="false" controller="PageRefParams">
+    <script type="text/javascript">
+</script>
+<style type="text/css">
+center{margin:0px auto; width:54rem;}
+</style>
+<noscript>
+    <img height="1" width="1" style="display:none" alt="fbpx" src="https://www.facebook.com/tr?id=1720708031531884&ev=PageView&noscript=1" />
+    <iframe height="1" width="1" style="display:none" alt="capi" src="/capi/curl_v2.php?noscript=1" ></iframe>
+</noscript>
+    <center>
+        <apex:outputPanel rendered="{!isPavers == false}"> 
+            <img src="https://www.cmkconstructioninc.com/img/logo-dark.png"/><br/>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!isPavers}"> 
+            <img src="https://www.cmkconstructioninc.com/img/logo-dark.png"/><br /><br />
+        </apex:outputPanel>
+    
+        <div style="font-size:20px;">
+            <apex:outputPanel rendered="{!isOOT == false}"> 
+            <p>THANK YOU!  We look forward to working with you!</p>
+    
+            <p>Appointment date and time confirmed - we will see you then.  We will reach out to you by phone and/or text to go over a few things needed for the meeting.</p>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!isOOT}">
+                <p>THANK YOU! Your appointment date and time request has been received! We will need to confirm some additional information before we confirm your FREE consultation. One of our scheduling specialists will contact you by phone, text, and/or email.</p>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!isPavers == false}"> 
+                <p>If anything changes on your end please text us, or email us at leads@cmkconstructioninc.com, or dial (619) 371-9870</p>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!isPavers}"> 
+                <p>If anything changes on your end please text us, or email us at leads@cmkconstructioninc.com, or dial (619) 371-9870</p>
+            </apex:outputPanel>
+                <apex:outputPanel rendered="{!isOOT == false}"> 
+            <p>We require that we meet with both homeowners if applicable so as to go over all details and concerns to provide an accurate quote.</p>
+            </apex:outputPanel>
+        </div>
+    </center>
+ 
+</apex:page>

@@ -1,0 +1,10 @@
+<div style="font-family: Arial, Helvetica, sans-serif; font-size: 12px">
+<p>Hi {!Lead.FirstName},</p>
+
+<p>This is Carrie from CMK Construction, Tampa’s number one remodeling experts. We’ve been voted 5 years in a row by Best of the Best Tampa Bay! Thank you for your trust on your project. Please click on the link below to schedule your personalized consultation. We’re required to meet with both homeowners, if applicable. We look forward to exceeding your expectations!</p>
+<p>Please <a href="https://cmkconstructioninc.my.salesforce-sites.com/appointments/?locate={!Lead.Id}"> CLICK HERE</a> to schedule your personalized consultation.</p>
+<p>Thanks,<br/>
+Carrie Marie</p>
+<p>&nbsp;</p>
+<span style="color: white">ref: {!Lead.Id}</span>
+</div>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Down_Greater_Than_1000</fullName>
+    <active>true</active>
+    <errorConditionFormula>Down_Payment__c &gt; 1000 &amp;&amp; Customer_acknowledges_increased_down_pmt__c &lt;&gt; true</errorConditionFormula>
+    <errorDisplayField>Customer_acknowledges_increased_down_pmt__c</errorDisplayField>
+    <errorMessage>If collecting more than $1000 for the down payment, customer must acknowledge</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Best_Way_To_Reach_You__c</fullName>
+    <externalId>false</externalId>
+    <label>Best Way To Reach You</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Best_Way_To_Reach_You</valueSetName>
+    </valueSet>
+</CustomField>

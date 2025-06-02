@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ACH</fullName>
+        <default>false</default>
+        <label>ACH</label>
+    </customValue>
+    <customValue>
+        <fullName>CASH</fullName>
+        <default>false</default>
+        <label>CASH</label>
+    </customValue>
+    <customValue>
+        <fullName>CREDIT CARD</fullName>
+        <default>false</default>
+        <label>CREDIT CARD</label>
+    </customValue>
+    <customValue>
+        <fullName>FINANCING</fullName>
+        <default>false</default>
+        <label>FINANCING</label>
+    </customValue>
+    <customValue>
+        <fullName>SPLIT FINANCING</fullName>
+        <default>false</default>
+        <label>SPLIT FINANCING</label>
+    </customValue>
+    <masterLabel>Down Payment Method</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

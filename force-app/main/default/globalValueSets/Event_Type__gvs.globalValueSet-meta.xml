@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>SALES APPOINTMENT</fullName>
+        <default>false</default>
+        <label>SALES APPOINTMENT</label>
+    </customValue>
+    <customValue>
+        <fullName>OFF</fullName>
+        <default>false</default>
+        <label>OFF</label>
+    </customValue>
+    <customValue>
+        <fullName>VACATION</fullName>
+        <default>false</default>
+        <label>VACATION</label>
+    </customValue>
+    <customValue>
+        <fullName>CALL BACK</fullName>
+        <default>false</default>
+        <label>CALL BACK</label>
+    </customValue>
+    <masterLabel>Event Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>GREEN: HAPPY CUSTOMER</fullName>
+        <default>false</default>
+        <label>GREEN: HAPPY CUSTOMER</label>
+    </customValue>
+    <customValue>
+        <fullName>BLUE: NORMAL CUSTOMER</fullName>
+        <default>false</default>
+        <label>BLUE: NORMAL CUSTOMER</label>
+    </customValue>
+    <customValue>
+        <fullName>YELLOW: CUSTOMER IS ESCALATING</fullName>
+        <default>false</default>
+        <label>YELLOW: CUSTOMER IS ESCALATING</label>
+    </customValue>
+    <customValue>
+        <fullName>ORANGE: EXTREMELY ESCALATED CUSTOMER</fullName>
+        <default>false</default>
+        <label>ORANGE: EXTREMELY ESCALATED CUSTOMER</label>
+    </customValue>
+    <customValue>
+        <fullName>RED: DO NOT CONTACT</fullName>
+        <default>false</default>
+        <label>RED: DO NOT CONTACT</label>
+    </customValue>
+    <customValue>
+        <fullName>RED: ESCALATED CUSTOMER</fullName>
+        <default>false</default>
+        <label>RED: ESCALATED CUSTOMER</label>
+    </customValue>
+    <masterLabel>Customer Satisfaction Rating</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CONFIRMED_APPOINTMENT_REP_ASSIGNED</fullName>
+    <columns>Appointment_Date_Time__c</columns>
+    <columns>City__c</columns>
+    <columns>Appointment_Notes__c</columns>
+    <columns>ApproxSqFt__c</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Opportunity_Type__c</columns>
+    <columns>Estimated_Attendees__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>CONFIRMED APPOINTMENT</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FULL_NAME</field>
+        <operation>equals</operation>
+        <value>Bryan Davis</value>
+    </filters>
+    <filters>
+        <field>Appointment_Date_Time__c</field>
+        <operation>equals</operation>
+        <value>TOMORROW</value>
+    </filters>
+    <label>CONFIRMED APPOINTMENT - BRYAN</label>
+</ListView>

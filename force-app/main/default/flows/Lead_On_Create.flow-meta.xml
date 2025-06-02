@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Welcome</name>
+        <label>Welcome</label>
+        <locationX>270</locationX>
+        <locationY>431</locationY>
+        <actionName>Lead.Welcome_Email</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Appointment_Request</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Lead.Welcome_Email</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <name>Appointment_Request</name>
+        <label>Appointment Request?</label>
+        <locationX>182</locationX>
+        <locationY>623</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Appointment_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Appointment_Time__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Appointment_Date_Time__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Lead</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Valid_Email</name>
+        <label>Valid Email?</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Welcome</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>No</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Email</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Email</leftValueReference>
+                <operator>EndsWith</operator>
+                <rightValue>
+                    <stringValue>@example.com</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Appointment_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Appointment_Request</targetReference>
+            </connector>
+            <label>No</label>
+        </rules>
+    </decisions>
+    <description>Added Dallas GMT conversion</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fCompany</name>
+        <dataType>String</dataType>
+        <expression>TRIM({!$Record.FirstName} + &apos; &apos; + {!$Record.LastName})</expression>
+    </formulas>
+    <formulas>
+        <name>fDateTime</name>
+        <dataType>DateTime</dataType>
+        <expression>DATETIMEVALUE( TEXT(DATE(YEAR({!$Record.Appointment_Date__c}), MONTH({!$Record.Appointment_Date__c}), DAY({!$Record.Appointment_Date__c}))) &amp; &apos; &apos; &amp; IF(
+  AND(
+    OR(LEFT(TEXT({!$Record.Appointment_Time__c}),1) &lt;&gt; &apos;1&apos;,LEFT(TEXT({!$Record.Appointment_Time__c}),2) = &apos;1:&apos;),
+    VALUE(LEFT(TEXT({!$Record.Appointment_Time__c}),1))&lt;8
+  ),
+  TEXT(VALUE(LEFT(TEXT({!$Record.Appointment_Time__c}),1))+12), 
+  LEFT(TEXT({!$Record.Appointment_Time__c}),FIND(&apos;:&apos;,TEXT({!$Record.Appointment_Time__c}))-1)
+) &amp; MID(TEXT({!$Record.Appointment_Time__c}),FIND(&apos;:&apos;,TEXT({!$Record.Appointment_Time__c})),3) &amp; &apos;:00&apos;
+) + (IF(
+  AND(
+    {!$Record.Appointment_Date__c} &gt;= DATE( YEAR({!$Record.Appointment_Date__c}), 3,(2*7+1)) - WEEKDAY(DATE(YEAR({!$Record.Appointment_Date__c}), 3,8-1)),
+    {!$Record.Appointment_Date__c} &lt;= DATE( YEAR({!$Record.Appointment_Date__c}),11,(1*7+1)) - WEEKDAY(DATE(YEAR({!$Record.Appointment_Date__c}),11,8-1))
+  ),
+/*DST is true*/
+  CASE({!$Record.Location__c},
+    &quot;Dallas&quot;,5,
+    7
+  ),
+/*DST is False*/
+  CASE({!$Record.Location__c},
+    &quot;Dallas&quot;, 6,
+    8
+  )
+))/24</expression>
+    </formulas>
+    <interviewLabel>Lead - On Create {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead - On Create</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Lead</name>
+        <label>Update Lead</label>
+        <locationX>50</locationX>
+        <locationY>731</locationY>
+        <inputAssignments>
+            <field>Appointment_Date_Time__c</field>
+            <value>
+                <elementReference>fDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Valid_Email</targetReference>
+        </connector>
+        <filterFormula>OR(
+AND(
+  TEXT({!$Record.LeadSource}) != &apos;BOOKED APPOINTMENT&apos;,
+  TEXT({!$Record.LeadSource}) != &apos;MANUAL ENTRY&apos;,
+  TEXT({!$Record.LeadSource}) != &apos;PRODUCTION TEAM&apos;,
+  TEXT({!$Record.LeadSource}) != &apos;CUSTOMER CALLBACK &apos;,
+  TEXT({!$Record.LeadSource}) != &apos;EVENTS ALL&apos;,
+  TEXT({!$Record.LeadSource}) != &apos;SEO COMMENTS ALL&apos;,
+  TEXT({!$Record.LeadSource}) != &apos;SOCIAL COMMENTS ALL&apos;,
+  TEXT({!$Record.LeadSource}) != &apos;DESIGN SPECIALIST CALLBACK NUMBER&apos;,
+  TEXT({!$Record.LeadSource}) != &apos;Lead Pro&apos;,
+  TEXT({!$Record.LeadSource}) != &apos;APPOINTMENT CONFIRMATION&apos;,
+  CONTAINS({!$Record.Email}, &apos;@&apos;),
+  NOT(CONTAINS({!$Record.Email}, &apos;@example.com&apos;)),
+  {!$Record.Booked_From_VF_Page__c} != true,
+  {!$Record.Legacy__c} != true
+),
+AND(
+  NOT(ISBLANK({!$Record.Appointment_Date__c})),
+  NOT(ISBLANK(TEXT({!$Record.Appointment_Time__c}))),
+  ISBLANK({!$Record.Appointment_Date_Time__c}),
+  {!$Record.Legacy__c} != true
+)
+)</filterFormula>
+        <object>Lead</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

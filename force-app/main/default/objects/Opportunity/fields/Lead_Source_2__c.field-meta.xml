@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source_2__c</fullName>
+    <description>Only Marketing Manager to edit this list of sources</description>
+    <externalId>false</externalId>
+    <inlineHelpText>See documentation regarding lead source tagging if you&apos;re unsure of the correct answer.</inlineHelpText>
+    <label>Lead Source 2</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>false</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BOOKED APPOINTMENT</fullName>
+                <default>false</default>
+                <label>BOOKED APPOINTMENT</label>
+            </value>
+            <value>
+                <fullName>CUSTOMER CALLBACK</fullName>
+                <default>false</default>
+                <label>CUSTOMER CALLBACK</label>
+            </value>
+            <value>
+                <fullName>EMAIL MARKETING</fullName>
+                <default>false</default>
+                <label>EMAIL MARKETING</label>
+            </value>
+            <value>
+                <fullName>EVENTS</fullName>
+                <default>false</default>
+                <label>EVENTS</label>
+            </value>
+            <value>
+                <fullName>MANUAL ENTRY</fullName>
+                <default>false</default>
+                <label>MANUAL ENTRY</label>
+            </value>
+            <value>
+                <fullName>ORGANIC SEO ALL</fullName>
+                <default>false</default>
+                <label>ORGANIC SEO ALL</label>
+            </value>
+            <value>
+                <fullName>REFERRAL ALL</fullName>
+                <default>false</default>
+                <label>REFERRAL ALL</label>
+            </value>
+            <value>
+                <fullName>REP SELF GENERATED ALL</fullName>
+                <default>false</default>
+                <label>REP SELF GENERATED ALL</label>
+            </value>
+            <value>
+                <fullName>SOCIAL MEDIA ALL</fullName>
+                <default>false</default>
+                <label>SOCIAL MEDIA ALL</label>
+            </value>
+            <value>
+                <fullName>WEBSITE MAIN ALL</fullName>
+                <default>false</default>
+                <label>WEBSITE MAIN ALL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

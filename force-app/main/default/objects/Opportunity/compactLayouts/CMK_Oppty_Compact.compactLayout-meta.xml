@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CMK_Oppty_Compact</fullName>
+    <fields>Name</fields>
+    <fields>StageName</fields>
+    <fields>Appointment_Date_Time__c</fields>
+    <fields>VIP_Status__c</fields>
+    <fields>Actual_Sqft__c</fields>
+    <fields>City__c</fields>
+    <fields>ZIP__c</fields>
+    <fields>Type</fields>
+    <label>CMK Oppty Compact</label>
+</CompactLayout>

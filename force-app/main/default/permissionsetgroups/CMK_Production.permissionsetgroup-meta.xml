@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>CMK Production</label>
+    <permissionSets>Account_Read</permissionSets>
+    <permissionSets>Apex</permissionSets>
+    <permissionSets>Lead_Read</permissionSets>
+    <permissionSets>Oppty_Read</permissionSets>
+    <permissionSets>Products_Read</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

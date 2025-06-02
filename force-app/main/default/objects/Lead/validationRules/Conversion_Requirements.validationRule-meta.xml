@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conversion_Requirements</fullName>
+    <active>true</active>
+    <description>Required for conversion: Address in valid location, Appointment Date and Time, Expected Attendees</description>
+    <errorConditionFormula>AND(
+  IsConverted = true,
+  OR(
+    ISBLANK( TEXT(Location__c) ),
+    ISBLANK( Appointment_Date_Time__c ),
+    ISBLANK( TEXT( Expected_Attendees__c ) )
+  ),
+  AND(
+    NOT(ISNEW())
+  )
+)</errorConditionFormula>
+    <errorMessage>Required for conversion: Address in valid location, Appointment Date and Time, Expected Attendees</errorMessage>
+</ValidationRule>

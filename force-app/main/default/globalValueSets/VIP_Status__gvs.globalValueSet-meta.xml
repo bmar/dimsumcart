@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>YES</fullName>
+        <default>false</default>
+        <label>YES</label>
+    </customValue>
+    <customValue>
+        <fullName>NO</fullName>
+        <default>false</default>
+        <label>NO</label>
+    </customValue>
+    <customValue>
+        <fullName>ELITE</fullName>
+        <default>false</default>
+        <label>ELITE</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A</fullName>
+        <default>false</default>
+        <label>N/A</label>
+    </customValue>
+    <masterLabel>VIP Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

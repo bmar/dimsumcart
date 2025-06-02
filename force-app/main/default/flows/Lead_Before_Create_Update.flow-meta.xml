@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>Digits_Only</name>
+        <label>Digits Only</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Phone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fPhone</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Clean_Mobile</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Digits_Only2</name>
+        <label>Digits Only</label>
+        <locationX>50</locationX>
+        <locationY>695</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.MobilePhone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fMobile</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Company_Has_Last_Name</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Company</name>
+        <label>Set Company</label>
+        <locationX>270</locationX>
+        <locationY>995</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Company</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fCompany</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>No_Product</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Turf</name>
+        <label>Set Turf</label>
+        <locationX>50</locationX>
+        <locationY>1295</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Product_Interest__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>TURF</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Clean_Mobile</name>
+        <label>Clean Mobile</label>
+        <locationX>182</locationX>
+        <locationY>587</locationY>
+        <defaultConnector>
+            <targetReference>Company_Has_Last_Name</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Clean2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.MobilePhone</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.MobilePhone</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Digits_Only2</targetReference>
+            </connector>
+            <label>Clean</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Clean_Phone</name>
+        <label>Clean Phone</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Clean_Mobile</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Clean</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Phone</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Phone</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Digits_Only</targetReference>
+            </connector>
+            <label>Clean</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Company_Has_Last_Name</name>
+        <label>Company Has Last Name?</label>
+        <locationX>182</locationX>
+        <locationY>887</locationY>
+        <defaultConnector>
+            <targetReference>Set_Company</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Company</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>$Record.LastName</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>No_Product</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>No_Product</name>
+        <label>No Product?</label>
+        <locationX>182</locationX>
+        <locationY>1187</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>None</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Product_Interest__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Turf</targetReference>
+            </connector>
+            <label>None</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>fCompany</name>
+        <dataType>String</dataType>
+        <expression>TRIM({!$Record.FirstName} + &apos; &apos; + {!$Record.LastName})</expression>
+    </formulas>
+    <formulas>
+        <name>fDateTime</name>
+        <dataType>DateTime</dataType>
+        <expression>DATETIMEVALUE( TEXT(DATE(YEAR({!$Record.Appointment_Date__c}), MONTH({!$Record.Appointment_Date__c}), DAY({!$Record.Appointment_Date__c}))) &amp; &apos; &apos; &amp; IF(
+  AND(
+    LEFT(TEXT({!$Record.Appointment_Time__c}),1) &lt;&gt; &apos;1&apos;,
+    VALUE(LEFT(TEXT({!$Record.Appointment_Time__c}),1))&lt;8
+  ),
+  TEXT(VALUE(LEFT(TEXT({!$Record.Appointment_Time__c}),1))+12), 
+  LEFT(TEXT({!$Record.Appointment_Time__c}),FIND(&apos;:&apos;,TEXT({!$Record.Appointment_Time__c}))-1)
+) &amp; MID(TEXT({!$Record.Appointment_Time__c}),FIND(&apos;:&apos;,TEXT({!$Record.Appointment_Time__c})),3) &amp; &apos;:00&apos;
+) + (IF(
+  AND(
+    {!$Record.Appointment_Date__c} &gt;= DATE( YEAR({!$Record.Appointment_Date__c}), 3,(2*7+1)) - WEEKDAY(DATE(YEAR({!$Record.Appointment_Date__c}), 3,8-1)),
+    {!$Record.Appointment_Date__c} &lt;= DATE( YEAR({!$Record.Appointment_Date__c}),11,(1*7+1)) - WEEKDAY(DATE(YEAR({!$Record.Appointment_Date__c}),11,8-1))
+  ),
+/*DST is true*/
+  CASE({!$Record.Location__c},
+    &quot;San Diego&quot;,7,
+    7
+  ),
+/*DST is False*/
+  CASE({!$Record.Location__c},
+    &quot;San Diego&quot;, 8,
+    8
+  )
+))/24</expression>
+    </formulas>
+    <formulas>
+        <name>fMobile</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE({!$Record.MobilePhone}, &apos;+1&apos;, &apos;&apos;), &apos; &apos;, &apos;&apos;), &apos;(&apos;, &apos;&apos;), &apos;)&apos;, &apos;&apos;), &apos;-&apos;, &apos;&apos;), &apos;.&apos;, &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>fPhone</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE({!$Record.Phone}, &apos;+1&apos;, &apos;&apos;), &apos; &apos;, &apos;&apos;), &apos;(&apos;, &apos;&apos;), &apos;)&apos;, &apos;&apos;), &apos;-&apos;, &apos;&apos;), &apos;.&apos;, &apos;&apos;)</expression>
+    </formulas>
+    <interviewLabel>Lead - Before Create Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead - Before Create Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Clean_Phone</targetReference>
+        </connector>
+        <filterFormula>OR(
+ISNULL(PICKLISTCOUNT({!$Record.Product_Interest__c})),
+NOT(CONTAINS({!$Record.Company},{!$Record.LastName})),
+{!$Record.Phone} != {!$Record__Prior.Phone},
+{!$Record.MobilePhone} != {!$Record__Prior.MobilePhone}
+)</filterFormula>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

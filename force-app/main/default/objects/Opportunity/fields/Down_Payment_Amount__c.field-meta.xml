@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Down_Payment_Amount__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( AND( Customer_acknowledges_increased_down_pmt__c &lt;&gt; true, Amount * 0.1 &gt; 1000 ), 1000, Amount *0.1)</formula>
+    <label>Down Payment Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

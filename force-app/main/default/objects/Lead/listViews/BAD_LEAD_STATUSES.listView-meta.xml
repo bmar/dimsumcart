@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BAD_LEAD_STATUSES</fullName>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>Call_Center_Notes__c</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.MOBILE_PHONE</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>Lead_Source_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>notEqual</operation>
+        <value>LEADS CONNECT BOOKED</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>COMMERCIAL,CUSTOMER SERVICE,DO NOT CONTACT,DUPLICATE,EMPLOYMENT,FINANCE,MARKETING CALL,NOT INTERESTED,OUT OF TERRITORY,SPAM</value>
+    </filters>
+    <label>BAD LEAD STATUSES</label>
+</ListView>

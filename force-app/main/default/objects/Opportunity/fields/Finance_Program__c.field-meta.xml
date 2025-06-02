@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Finance_Program__c</fullName>
+    <externalId>false</externalId>
+    <label>Finance Program</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GL-NV 5yr 12.99% APR</fullName>
+                <default>false</default>
+                <label>GL-NV 5yr 12.99% APR</label>
+            </value>
+            <value>
+                <fullName>GL-NV 10yr 12.99% APR</fullName>
+                <default>false</default>
+                <label>GL-NV 10yr 12.99% APR</label>
+            </value>
+            <value>
+                <fullName>GL-NV 15yr 12.99% APR</fullName>
+                <default>false</default>
+                <label>GL-NV 15yr 12.99% APR</label>
+            </value>
+            <value>
+                <fullName>GL-NV No Payment No Interest 6 Months</fullName>
+                <default>false</default>
+                <label>GL-NV No Payment No Interest 6 Months</label>
+            </value>
+            <value>
+                <fullName>GL-NV No Payment No Interest 12 Months</fullName>
+                <default>false</default>
+                <label>GL-NV No Payment No Interest 12 Months</label>
+            </value>
+            <value>
+                <fullName>GL-NV 5yr 9.99% APR</fullName>
+                <default>false</default>
+                <label>GL-NV 5yr 9.99% APR</label>
+            </value>
+            <value>
+                <fullName>GL-NV 15yr 9.99% APR</fullName>
+                <default>false</default>
+                <label>GL-NV 15yr 9.99% APR</label>
+            </value>
+            <value>
+                <fullName>GL-CA 5yr 12.99% APR</fullName>
+                <default>false</default>
+                <label>GL-CA 5yr 12.99% APR</label>
+            </value>
+            <value>
+                <fullName>GL-CA 10yr 12.99% APR</fullName>
+                <default>false</default>
+                <label>GL-CA 10yr 12.99% APR</label>
+            </value>
+            <value>
+                <fullName>GL-CA 15yr 12.99% APR</fullName>
+                <default>false</default>
+                <label>GL-CA 15yr 12.99% APR</label>
+            </value>
+            <value>
+                <fullName>GL-CA No Payment No Interest 6 Months</fullName>
+                <default>false</default>
+                <label>GL-CA No Payment No Interest 6 Months</label>
+            </value>
+            <value>
+                <fullName>GL-CA No Payment No Interest 12 Months</fullName>
+                <default>false</default>
+                <label>GL-CA No Payment No Interest 12 Months</label>
+            </value>
+            <value>
+                <fullName>GL-CA 5yr 9.99% APR</fullName>
+                <default>false</default>
+                <label>GL-CA 5yr 9.99% APR</label>
+            </value>
+            <value>
+                <fullName>GL-CA 15yr 9.99% APR</fullName>
+                <default>false</default>
+                <label>GL-CA 15yr 9.99% APR</label>
+            </value>
+            <value>
+                <fullName>GL-CA No Payment No Interest 18 Months</fullName>
+                <default>false</default>
+                <label>GL-CA No Payment No Interest 18 Months</label>
+            </value>
+            <value>
+                <fullName>GL-CA No Interest W/ Min Payment 18 Months</fullName>
+                <default>false</default>
+                <label>GL-CA No Interest W/ Min Payment 18 Months</label>
+            </value>
+            <value>
+                <fullName>GL-TX 5yr 12.99% APR</fullName>
+                <default>false</default>
+                <label>GL-TX 5yr 12.99% APR</label>
+            </value>
+            <value>
+                <fullName>GL-TX 10yr 12.99% APR</fullName>
+                <default>false</default>
+                <label>GL-TX 10yr 12.99% APR</label>
+            </value>
+            <value>
+                <fullName>GL-TX 15yr 12.99% APR</fullName>
+                <default>false</default>
+                <label>GL-TX 15yr 12.99% APR</label>
+            </value>
+            <value>
+                <fullName>GL-TX No Payment No Interest 6 Months</fullName>
+                <default>false</default>
+                <label>GL-TX No Payment No Interest 6 Months</label>
+            </value>
+            <value>
+                <fullName>GL-TX No Payment No Interest 12 Months</fullName>
+                <default>false</default>
+                <label>GL-TX No Payment No Interest 12 Months</label>
+            </value>
+            <value>
+                <fullName>GL-TX 5yr 9.99% APR</fullName>
+                <default>false</default>
+                <label>GL-TX 5yr 9.99% APR</label>
+            </value>
+            <value>
+                <fullName>GL-TX 15yr 9.99% APR</fullName>
+                <default>false</default>
+                <label>GL-TX 15yr 9.99% APR</label>
+            </value>
+            <value>
+                <fullName>GL-TX No Payment No Interest 18 Months</fullName>
+                <default>false</default>
+                <label>GL-TX No Payment No Interest 18 Months</label>
+            </value>
+            <value>
+                <fullName>GL-TX No Interest W/ Min Payment 18 Months</fullName>
+                <default>false</default>
+                <label>GL-TX No Interest W/ Min Payment 18 Months</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

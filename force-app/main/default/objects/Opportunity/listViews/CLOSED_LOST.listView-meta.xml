@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLOSED_LOST</fullName>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>Appointment_Date_Time__c</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>VIP_Status__c</columns>
+    <columns>Appointment_Notes__c</columns>
+    <columns>ApproxSqFt__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>Loss_Reason__c</columns>
+    <columns>City__c</columns>
+    <columns>ZIP__c</columns>
+    <columns>Opportunity_Type__c</columns>
+    <columns>Brand_Ambassador_Name__c</columns>
+    <columns>Estimated_Attendees__c</columns>
+    <columns>Opportunity_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Closed Lost</value>
+    </filters>
+    <label>CLOSED LOST</label>
+</ListView>

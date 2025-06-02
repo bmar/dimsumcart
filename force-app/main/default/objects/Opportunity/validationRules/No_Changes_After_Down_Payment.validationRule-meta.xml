@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Changes_After_Down_Payment</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK( Down_Payment_Date__c )),
+  OR(
+    ISCHANGED( Amount ),
+    ISCHANGED( Actual_Sqft__c )
+  )
+)</errorConditionFormula>
+    <errorMessage>After Down Payment has been received, amount and sqft changes can only be made by creating a Change Order on a Closed Won Opportunity</errorMessage>
+</ValidationRule>

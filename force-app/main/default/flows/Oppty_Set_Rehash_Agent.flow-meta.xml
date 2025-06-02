@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Set_Rehash_Agent</name>
+        <label>Set Rehash Agent</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Rehash_Agent__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <environments>Default</environments>
+    <interviewLabel>Oppty - Set Rehash Agent {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Oppty - Set Rehash Agent</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Rehash_Agent</targetReference>
+        </connector>
+        <filterFormula>AND(
+  NOT(ISBLANK({!$Record.Seen_Not_Sold_Datetime__c})),
+  CONTAINS(&quot;FOLLOW UP;PLEASE RESCHEDULE;LEADS CONNECT REHASH;LEADS CONNECT REHASH FWUP;LEADS CONNECT REHASH REJECTED;CANCELLED APPOINTMENT;DESIGN SPECIALIST FWUP&quot;,TEXT({!$Record__Prior.StageName})),
+  CONTAINS(&quot;SITE VISIT SCHEDULED;CONFIRMED APPOINTMENT&quot;,TEXT({!$Record.StageName})),
+  TEXT({!$Record.Leads_Connect_Status__c})&lt;&gt;&quot;Qualified&quot;
+)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

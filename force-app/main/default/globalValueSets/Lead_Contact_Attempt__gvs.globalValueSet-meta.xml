@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>1ST DAY X1</fullName>
+        <default>false</default>
+        <label>1ST DAY X1</label>
+    </customValue>
+    <customValue>
+        <fullName>1ST DAY X2</fullName>
+        <default>false</default>
+        <label>1ST DAY X2</label>
+    </customValue>
+    <customValue>
+        <fullName>1ST DAY X3</fullName>
+        <default>false</default>
+        <label>1ST DAY X3</label>
+    </customValue>
+    <customValue>
+        <fullName>1ST DAY X4</fullName>
+        <default>false</default>
+        <label>1ST DAY X4</label>
+    </customValue>
+    <customValue>
+        <fullName>1ST DAY X5</fullName>
+        <default>false</default>
+        <label>1ST DAY X5</label>
+    </customValue>
+    <customValue>
+        <fullName>2ND DAY X1</fullName>
+        <default>false</default>
+        <label>2ND DAY X1</label>
+    </customValue>
+    <customValue>
+        <fullName>2ND DAY X2</fullName>
+        <default>false</default>
+        <label>2ND DAY X2</label>
+    </customValue>
+    <customValue>
+        <fullName>2ND DAY X3</fullName>
+        <default>false</default>
+        <label>2ND DAY X3</label>
+    </customValue>
+    <customValue>
+        <fullName>2ND DAY X4</fullName>
+        <default>false</default>
+        <label>2ND DAY X4</label>
+    </customValue>
+    <customValue>
+        <fullName>2ND DAY X5</fullName>
+        <default>false</default>
+        <label>2ND DAY X5</label>
+    </customValue>
+    <customValue>
+        <fullName>3RD DAY X1</fullName>
+        <default>false</default>
+        <label>3RD DAY X1</label>
+    </customValue>
+    <customValue>
+        <fullName>3RD DAY X2</fullName>
+        <default>false</default>
+        <label>3RD DAY X2</label>
+    </customValue>
+    <customValue>
+        <fullName>3RD DAY X3</fullName>
+        <default>false</default>
+        <label>3RD DAY X3</label>
+    </customValue>
+    <customValue>
+        <fullName>4TH DAY X1</fullName>
+        <default>false</default>
+        <label>4TH DAY X1</label>
+    </customValue>
+    <customValue>
+        <fullName>4TH DAY X2</fullName>
+        <default>false</default>
+        <label>4TH DAY X2</label>
+    </customValue>
+    <customValue>
+        <fullName>4TH DAY X3</fullName>
+        <default>false</default>
+        <label>4TH DAY X3</label>
+    </customValue>
+    <customValue>
+        <fullName>5TH DAY X1</fullName>
+        <default>false</default>
+        <label>5TH DAY X1</label>
+    </customValue>
+    <customValue>
+        <fullName>5TH DAY X2</fullName>
+        <default>false</default>
+        <label>5TH DAY X2</label>
+    </customValue>
+    <customValue>
+        <fullName>5TH DAY X3</fullName>
+        <default>false</default>
+        <label>5TH DAY X3</label>
+    </customValue>
+    <customValue>
+        <fullName>6TH DAY X1</fullName>
+        <default>false</default>
+        <label>6TH DAY X1</label>
+    </customValue>
+    <customValue>
+        <fullName>6TH DAY X2</fullName>
+        <default>false</default>
+        <label>6TH DAY X2</label>
+    </customValue>
+    <customValue>
+        <fullName>6TH DAY X3</fullName>
+        <default>false</default>
+        <label>6TH DAY X3</label>
+    </customValue>
+    <customValue>
+        <fullName>7TH DAY X1</fullName>
+        <default>false</default>
+        <label>7TH DAY X1</label>
+    </customValue>
+    <customValue>
+        <fullName>7TH DAY X2</fullName>
+        <default>false</default>
+        <label>7TH DAY X2</label>
+    </customValue>
+    <customValue>
+        <fullName>7TH DAY X3</fullName>
+        <default>false</default>
+        <label>7TH DAY X3</label>
+    </customValue>
+    <customValue>
+        <fullName>8TH DAY X1</fullName>
+        <default>false</default>
+        <label>8TH DAY X1</label>
+    </customValue>
+    <customValue>
+        <fullName>8TH DAY X2</fullName>
+        <default>false</default>
+        <label>8TH DAY X2</label>
+    </customValue>
+    <customValue>
+        <fullName>8TH DAY X3</fullName>
+        <default>false</default>
+        <label>8TH DAY X3</label>
+    </customValue>
+    <customValue>
+        <fullName>9TH DAY X1</fullName>
+        <default>false</default>
+        <label>9TH DAY X1</label>
+    </customValue>
+    <customValue>
+        <fullName>9TH DAY X2</fullName>
+        <default>false</default>
+        <label>9TH DAY X2</label>
+    </customValue>
+    <customValue>
+        <fullName>9TH DAY X3</fullName>
+        <default>false</default>
+        <label>9TH DAY X3</label>
+    </customValue>
+    <customValue>
+        <fullName>10TH DAY X1</fullName>
+        <default>false</default>
+        <label>10TH DAY X1</label>
+    </customValue>
+    <customValue>
+        <fullName>10TH DAY X2</fullName>
+        <default>false</default>
+        <label>10TH DAY X2</label>
+    </customValue>
+    <customValue>
+        <fullName>10TH DAY X3</fullName>
+        <default>false</default>
+        <label>10TH DAY X3</label>
+    </customValue>
+    <masterLabel>Lead Contact Attempt</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

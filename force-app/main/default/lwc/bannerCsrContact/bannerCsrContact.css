@@ -1,0 +1,46 @@
+.bannerCSR {
+    width: 100%;
+    line-height: 2rem;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: -2.75rem;
+}
+.green.bannerCSR {
+    background-color: #22683e;
+    margin-bottom: inherit;
+}
+
+.blue.bannerCSR {
+    background-color: #014486;
+    margin-bottom: inherit;
+}
+
+.yellow.bannerCSR {
+    background-color: #d79304;
+    margin-bottom: inherit;
+}
+
+.orange.bannerCSR {
+    background-color: #ff5d2d;
+    margin-bottom: inherit;
+}
+
+.red.bannerCSR {
+    background-color: #BA0517;
+    margin-bottom: inherit;
+}
+ 
+.bannerCSR p {
+    display: inline-block;
+    animation: pulsate 3.5s ease-in-out infinite;
+    font-size:1.5rem;
+}
+ 
+@keyframes pulsate {
+    0%   { transform: scale(1.0) }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1.0); }
+}

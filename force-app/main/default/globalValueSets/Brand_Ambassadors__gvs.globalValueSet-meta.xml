@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Ambassador 1</fullName>
+        <default>false</default>
+        <label>Ambassador 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Abmassador 2</fullName>
+        <default>false</default>
+        <label>Abmassador 2</label>
+    </customValue>
+    <customValue>
+        <fullName>See Lead Source Notes</fullName>
+        <default>false</default>
+        <label>See Lead Source Notes</label>
+    </customValue>
+    <masterLabel>Brand Ambassadors</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>SITE VISIT SCHEDULED</fullName>
+        <default>false</default>
+        <label>SITE VISIT SCHEDULED</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>40</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>CONFIRMED APPOINTMENT</fullName>
+        <default>false</default>
+        <label>CONFIRMED APPOINTMENT</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>FOLLOW UP</fullName>
+        <default>false</default>
+        <label>FOLLOW UP</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>60</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>CONTRACT OUT</fullName>
+        <default>false</default>
+        <label>CONTRACT OUT</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>CHANGE ORDER</fullName>
+        <default>false</default>
+        <label>CHANGE ORDER</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>99</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>CONTRACT SIGNED</fullName>
+        <default>false</default>
+        <label>CONTRACT SIGNED</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>99</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>PLEASE RESCHEDULE</fullName>
+        <default>false</default>
+        <description>PLEASE RESCHEDULE</description>
+        <label>PLEASE RESCHEDULE</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>30</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>LEADS CONNECT REHASH REJECTED</fullName>
+        <default>false</default>
+        <label>LEADS CONNECT REHASH REJECTED</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>CANCELLED APPOINTMENT</fullName>
+        <default>false</default>
+        <label>CANCELLED APPOINTMENT</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+        <label>Closed Lost</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed Won</fullName>
+        <default>false</default>
+        <label>Closed Won</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+</StandardValueSet>

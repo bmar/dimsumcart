@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Tampa Bay</fullName>
+        <default>false</default>
+        <label>Tampa Bay</label>
+    </customValue>
+    <customValue>
+        <fullName>NO APPOINTMENTS</fullName>
+        <default>false</default>
+        <label>NO APPOINTMENTS</label>
+    </customValue>
+    <masterLabel>Location</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

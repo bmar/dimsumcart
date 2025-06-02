@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Guest Bath Remodel</fullName>
+        <default>false</default>
+        <label>Guest Bath Remodel</label>
+    </customValue>
+    <customValue>
+        <fullName>Master Bath Remodel</fullName>
+        <default>false</default>
+        <label>Master Bath Remodel</label>
+    </customValue>
+    <customValue>
+        <fullName>Shower Remodel</fullName>
+        <default>false</default>
+        <label>Shower Remodel</label>
+    </customValue>
+    <customValue>
+        <fullName>Wet Space Replacement</fullName>
+        <default>false</default>
+        <label>Wet Space Replacement</label>
+    </customValue>
+    <customValue>
+        <fullName>Kitchen Remodel</fullName>
+        <default>false</default>
+        <label>Kitchen Remodel</label>
+    </customValue>
+    <customValue>
+        <fullName>Countertops</fullName>
+        <default>false</default>
+        <label>Countertops</label>
+    </customValue>
+    <customValue>
+        <fullName>Flooring</fullName>
+        <default>false</default>
+        <label>Flooring</label>
+    </customValue>
+    <masterLabel>Opportunity Sub Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

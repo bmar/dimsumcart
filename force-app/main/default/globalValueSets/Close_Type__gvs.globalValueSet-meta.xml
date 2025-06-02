@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ONE CALL CLOSE</fullName>
+        <default>false</default>
+        <label>ONE CALL CLOSE</label>
+    </customValue>
+    <customValue>
+        <fullName>CALL BACK</fullName>
+        <default>false</default>
+        <label>CALL BACK</label>
+    </customValue>
+    <masterLabel>Close Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : Bradford Mar
+  @group             : 
+  @last modified on  : 07-12-2023
+  @last modified by  : Bradford Mar
+-->
+<template>
+    <lightning-card title="Primary Contact" icon-name="standard:contact">
+        <template lwc:if={opportunity.data}>
+            <div class="slds-m-around_large">
+                <!-- <lightning-tile
+                  label={name}
+                  href={id}> -->
+                    <p class="slds-var-m-left_small"><strong><lightning-formatted-url label={name} value={id} tooltip="Go to Contact"></lightning-formatted-url></strong></p>
+                    <div class="slds-var-m-left_small slds-var-m-vertical_small"><lightning-formatted-address
+                        street={street}
+                        city={city}
+                        province={state}
+                        postal-code={zip}
+                    ></lightning-formatted-address></div>
+                    <p class="slds-var-m-left_small"><lightning-formatted-email value={email}></lightning-formatted-email></p>
+                    <p class="slds-var-m-left_small" lwc:if={vip}>VIP Status: {vip}</p>
+                <!-- </lightning-tile> -->
+            </div>
+        </template>
+    </lightning-card>
+</template>

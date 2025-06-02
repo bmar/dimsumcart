@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>BATH</fullName>
+        <default>true</default>
+        <label>BATH</label>
+    </customValue>
+    <customValue>
+        <fullName>KITCHEN</fullName>
+        <default>false</default>
+        <label>KITCHEN</label>
+    </customValue>
+    <customValue>
+        <fullName>ROOFING</fullName>
+        <default>false</default>
+        <label>ROOFING</label>
+    </customValue>
+    <customValue>
+        <fullName>ROOM ADDITIONS</fullName>
+        <default>false</default>
+        <label>ROOM ADDITIONS</label>
+    </customValue>
+    <customValue>
+        <fullName>GENERAL REMODELING</fullName>
+        <default>false</default>
+        <label>GENERAL REMODELING</label>
+    </customValue>
+    <masterLabel>Opportunity Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : Bradford Mar
+  @group             : 
+  @last modified on  : 04-18-2023
+  @last modified by  : Bradford Mar
+
+  flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction
+
+-->
+<aura:component implements="force:hasRecordId">
+    <aura:attribute name="leadRecord" type="Object"/>
+    <aura:attribute name="recordLoadError" type="String"/>
+    <aura:attribute name="CSR" type="String"/>
+    <force:recordData aura:id="recordLoader"
+                    fields="LastName,Description,Phone,Customer_Satisfaction_Rating__c"
+                    recordId="{!v.recordId}"
+                    targetFields="{!v.leadRecord}"
+                    targetError="{!v.recordLoadError}"
+                    recordUpdated="{!c.init}"
+                    />
+    <div class="{!v.CSR}">
+        <p><lightning:formattedText title="Customer Satisfaction Rating" value="{!v.leadRecord.Customer_Satisfaction_Rating__c}" /></p>
+    </div>
+    <!-- div> 
+        <lightning:card iconName="standard:lead" title="{!v.leadRecord.LastName}" >
+            <div class="slds-p-horizontal- -small">
+                <p class="slds-text-heading- -medium"><lightning:formattedPhone title="Phone" value="{!v.leadRecord.Phone}" /></p>
+                <p class="slds-truncate"><lightning:formattedText title="Description" value="{!v.leadRecord.Description}" /></p>
+                <p class="slds-truncate"> <lightning:formattedText title="Customer Satisfaction Rating" value="{!v.leadRecord.Customer_Satisfaction_Rating__c}" /></p>
+            </div>
+        </lightning:card>
+    </div -->
+</aura:component>

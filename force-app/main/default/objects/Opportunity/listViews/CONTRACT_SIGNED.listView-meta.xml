@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CONTRACT_SIGNED</fullName>
+    <columns>Appointment_Date_Time__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Appointment_Notes__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>City__c</columns>
+    <columns>Location__c</columns>
+    <columns>ZIP__c</columns>
+    <columns>Opportunity_Type__c</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>Opportunity_Notes__c</columns>
+    <columns>OPPORTUNITY.LAST_UPDATE</columns>
+    <columns>Contract_Signed__c</columns>
+    <columns>Down_Payment_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>CONTRACT SIGNED</value>
+    </filters>
+    <label>CONTRACT SIGNED</label>
+</ListView>

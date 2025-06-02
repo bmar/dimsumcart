@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BOOKED_APPOINTMENT</fullName>
+    <columns>Appointment_Date_Time__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.STREET</columns>
+    <columns>Location__c</columns>
+    <columns>LEAD.PHONE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>BOOKED APPOINTMENT</value>
+    </filters>
+    <label>BOOKED APPOINTMENT</label>
+</ListView>

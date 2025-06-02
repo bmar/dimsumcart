@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CONFIRMED_APPOINTMENT</fullName>
+    <columns>City__c</columns>
+    <columns>ZIP__c</columns>
+    <columns>Appointment_Date_Time__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Appointment_Notes__c</columns>
+    <columns>Opportunity_Type__c</columns>
+    <columns>Opportunity_Notes__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>OPPORTUNITY.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>CONFIRMED APPOINTMENT</value>
+    </filters>
+    <filters>
+        <field>Appointment_Date_Time__c</field>
+        <operation>equals</operation>
+        <value>TOMORROW</value>
+    </filters>
+    <label>CONFIRMED APPOINTMENT</label>
+</ListView>

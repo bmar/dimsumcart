@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Checklist_Before_Won</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  Diagrams__c &lt;&gt; true,
+  Photo_s__c &lt;&gt; true,
+  Contract_Signed__c &lt;&gt; true,
+  Photo_s__c &lt;&gt; true,
+  Price_Worksheet__c &lt;&gt; true,
+  Video_s__c &lt;&gt; true,
+  TEXT(StageName) = &apos;CLOSED WON&apos;,
+  ISBLANK(Down_Payment_Date__c),
+  PRIORVALUE(StageName) &lt;&gt; &apos;CONTRACT SIGNED&apos;
+)</errorConditionFormula>
+    <errorMessage>Must be stage CONTRACT SIGNED, set a down payment and complete checklist: Diagrams, Photos, Videos, Price Worksheet, Contract Signed</errorMessage>
+</ValidationRule>
