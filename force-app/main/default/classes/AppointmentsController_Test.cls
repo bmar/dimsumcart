@@ -113,6 +113,7 @@ public class AppointmentsController_Test {
         cl.LeadSource = 'BOOKED APPOINTMENT';
         cl.Appointment_Time__c = '10:00 AM';
         cl.Appointment_Date__c =  (Date) Date.valueOf('2025-09-01');
+        cl.Appointment_Date_Time__c =  System.now()+1;
         cl.Expected_Attendees__c = 'ONE LEG';
         cl.Product_Interest__c = 'Bath';
         insert cl;

@@ -45,7 +45,7 @@ public class GetSlots_Test {
         o.AccountId = a.id;
         o.Name = a.Name + '-';
         o.StageName = 'SITE VISIT SCHEDULED';
-        o.CloseDate = Date.newInstance(2022, 11, 1);
+        o.CloseDate = Date.newInstance(2025, 11, 1);
         o.Appointment_Date__c = Date.parse('5/1/2023');
         o.Appointment_Time__c = '10:00 AM';
         o.Opportunity_Type__c = 'BATH';
