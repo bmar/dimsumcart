@@ -234,9 +234,9 @@ public Without Sharing class AppointmentsController {
                     leadw.cu_isAffirmedConsent = String.valueOf(leadRecords.Marketing_Email_OK__c);
                     leadw.cu_postalcode = leadRecords.postalcode;
                     leadw.cu_territory = leadRecords.Location__c;
-                    if(leadRecords.Product_Interest__c != null) {
+                    /*if(leadRecords.Product_Interest__c != null) {
                         leadw.cu_serviceType = leadRecords.Product_Interest__c;
-                    }
+                    }*/
                     if(leadRecords.isConverted == true) {
                         leadw.cu_appointmentDate = leadRecords.Appointment_Date__c.Month() + '/' + leadRecords.Appointment_Date__c.Day() + '/' +leadRecords.Appointment_Date__c.Year();
                         leadw.cu_appointmentTime = leadRecords.Appointment_Time__c;

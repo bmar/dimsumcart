@@ -16,6 +16,21 @@
         <label>EMAIL</label>
     </customValue>
     <customValue>
+        <fullName>TEXT / EMAIL</fullName>
+        <default>false</default>
+        <label>TEXT / EMAIL</label>
+    </customValue>
+    <customValue>
+        <fullName>CALL / EMAIL</fullName>
+        <default>false</default>
+        <label>CALL / EMAIL</label>
+    </customValue>
+    <customValue>
+        <fullName>CALL / TEXT</fullName>
+        <default>false</default>
+        <label>CALL / TEXT</label>
+    </customValue>
+    <customValue>
         <fullName>ALL</fullName>
         <default>false</default>
         <label>ALL</label>

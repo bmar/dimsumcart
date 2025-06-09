@@ -12,6 +12,10 @@ Appointment Date: {!Lead.Appointment_Date__c}
 
 Appointment Time: {!Lead.Appointment_Time__c}
 
+How Did You Hear About Us?: {!Lead.How_Did_You_Hear_About_Us__c}
+
+Lead Source: {!Lead.LeadSource}
+
 Click here to open the lead in Salesforce: https://cmkconstructioninc.lightning.force.com/lightning/r/Lead/{!Lead.Id}/view
 
 Thanks

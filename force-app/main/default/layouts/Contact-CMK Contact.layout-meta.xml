@@ -98,10 +98,10 @@
                 <behavior>Edit</behavior>
                 <field>HasOptedOutOfEmail</field>
             </layoutItems>
-            <!-- layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>smagicinteract__SMSOptOut__c</field>
-            </layoutItems -->
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

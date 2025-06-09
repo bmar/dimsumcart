@@ -72,10 +72,10 @@
                 <behavior>Edit</behavior>
                 <field>DoNotCall</field>
             </layoutItems>
-            <!-- layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>smagicinteract__SMSOptOut__c</field>
-            </layoutItems -->
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>HasOptedOutOfEmail</field>
@@ -145,6 +145,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Product_Interest__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Product_Interest_Sub_Type__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

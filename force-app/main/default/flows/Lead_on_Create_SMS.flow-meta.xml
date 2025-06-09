@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <name>Which_Phone</name>
+        <label>Which Phone?</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Send_Phone</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Phone</defaultConnectorLabel>
+        <rules>
+            <name>Mobile</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.MobilePhone</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Mobile</targetReference>
+            </connector>
+            <label>Mobile</label>
+        </rules>
+    </decisions>
+    <description>Removed Lead Sources starting with CUSTOMER CALLBACK</description>
+    <environments>Default</environments>
+    <interviewLabel>Lead - on Create SMS {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead - on Create SMS</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Send_Mobile</name>
+        <label>Send Mobile</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>smagicinteract__Automation_Key_Reference__c</field>
+            <value>
+                <stringValue>PA-000001</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>smagicinteract__Lead__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>smagicinteract__Converse_App_Task__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Send_Phone</name>
+        <label>Send Phone</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>smagicinteract__Automation_Key_Reference__c</field>
+            <value>
+                <stringValue>PA-000002</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>smagicinteract__Lead__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>smagicinteract__Converse_App_Task__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Which_Phone</targetReference>
+        </connector>
+        <filterFormula>AND(
+  TEXT({!$Record.LeadSource}) != &apos;BOOKED APPOINTMENT&apos;,
+  TEXT({!$Record.LeadSource}) != &apos;CONVERTED&apos;,
+  TEXT({!$Record.LeadSource}) != &apos;MANUAL ENTRY&apos;,
+  TEXT({!$Record.LeadSource}) != &apos;EVENTS ALL&apos;,
+  TEXT({!$Record.LeadSource}) != &apos;LEADS CONNECT BOOKED&apos;,
+  LEFT(TEXT({!$Record.LeadSource}),17) != &apos;CUSTOMER CALLBACK&apos;,
+  OR(
+    NOT(ISBLANK({!$Record.MobilePhone})),
+    NOT(ISBLANK({!$Record.Phone}))
+  ),
+  {!$Record.Booked_From_VF_Page__c} != true,
+  {!$Record.Legacy__c} != true
+)</filterFormula>
+        <object>Lead</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

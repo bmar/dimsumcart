@@ -26,7 +26,7 @@
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Both</name>
-            <conditionLogic>(1 OR 2) AND 3 AND 4</conditionLogic><!-- AND 5 -->
+            <conditionLogic>(1 OR 2) AND 3 AND 4 AND 5</conditionLogic><!-- -->
             <conditions>
                 <leftValueReference>$Record.Contact__r.MobilePhone</leftValueReference>
                 <operator>IsNull</operator>
@@ -41,13 +41,13 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
-            <!-- conditions>
+            <conditions>
                 <leftValueReference>$Record.Contact__r.smagicinteract__SMSOptOut__c</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
-            </conditions -->
+            </conditions>
             <conditions>
                 <leftValueReference>$Record.Contact__r.Email</leftValueReference>
                 <operator>IsNull</operator>
@@ -69,7 +69,7 @@
         </rules>
         <rules>
             <name>SMS</name>
-            <conditionLogic>1 OR 2</conditionLogic><!-- () AND 3 -->
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic><!--  -->
             <conditions>
                 <leftValueReference>$Record.Contact__r.MobilePhone</leftValueReference>
                 <operator>IsNull</operator>
@@ -84,13 +84,13 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
-            <!-- conditions>
+            <conditions>
                 <leftValueReference>$Record.Contact__r.smagicinteract__SMSOptOut__c</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
-            </conditions -->
+            </conditions>
             <connector>
                 <targetReference>Copy_2_of_Add_Campaign_Member_SMS</targetReference>
             </connector>

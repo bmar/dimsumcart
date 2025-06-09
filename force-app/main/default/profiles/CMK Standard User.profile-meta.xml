@@ -1670,6 +1670,21 @@
         <readable>false</readable>
     </fieldPermissions>
     <layoutAssignments>
+        <layout>Lead-CMK Lead</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-CMK Account</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact-CMK Contact</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Location-Booking Location Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Product2-CMK Product</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>ZIP_Code__c-ZIP Code Layout</layout>
     </layoutAssignments>
     <objectPermissions>
