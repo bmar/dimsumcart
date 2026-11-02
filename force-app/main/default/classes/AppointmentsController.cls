@@ -12,15 +12,15 @@ public Without Sharing class AppointmentsController {
     public LeadWrapper leadw{get;set;}
     public String lead_source{get;set;}
     public String cu_referrer{get;set;}
-    public Boolean isPavers{get;set;} 
+    public Boolean isKitchen{get;set;} 
     public Boolean cu_found{get;set;} 
 /*    
     //Affirmative Consent
     public Boolean isAffirmedConsent{get;set;}
     
     //Product Interest changes to Checkbox
-    public Boolean isCheckedTurf{get;set;}
-    public Boolean isCheckedWindows{get;set;}
+    public Boolean isCheckedBath{get;set;}
+    public Boolean isCheckedKitchen{get;set;}
 */
     public class LeadWrapper{
         //public ID Id{get;set;}
@@ -37,6 +37,7 @@ public Without Sharing class AppointmentsController {
         public String cu_isAffirmedConsent{get;set;}
         public String cu_territory{get;set;}
         public String cu_howfind{get;set;}
+        public String cu_callCenterAgent{get;set;}
     }
 
     public class BookingLocation{
@@ -206,22 +207,28 @@ public Without Sharing class AppointmentsController {
 
     public AppointmentsController() {
         cu_referrer = (apexpages.currentPage().getheaders().get('Referer') != null) ? apexpages.currentPage().getheaders().get('Referer') : '';
-        isPavers = (cu_referrer.indexOf('lilikoiagency.com') >= 0)? true : false;
-        lead_source = (ApexPages.CurrentPage().getparameters().get('utm_content') != null) ? ApexPages.CurrentPage().getparameters().get('utm_content') : (isPavers)? 'WEBSITE MAIN PAVERS ALL' : 'WEBSITE MAIN ALL';
+        isKitchen = (cu_referrer.indexOf('lilikoiagency.com') >= 0)? true : false;
+        lead_source = (ApexPages.CurrentPage().getparameters().get('utm_content') != null) ? ApexPages.CurrentPage().getparameters().get('utm_content') : (isKitchen)? 'WEBSITE MAIN KITCHEN ALL' : 'WEBSITE MAIN ALL';
         if(ApexPages.CurrentPage().getparameters().get('locate') != null) {
-            String data = ApexPages.CurrentPage().getparameters().get('locate');
-            Boolean isZip = (data != null) ? data.length() == 5: false;
-            Boolean isRecord = (data != null) ? data.length() == 15 || data.length() == 18 : false;
-            Boolean isLead = (data != null) ? isRecord && data.substring(0,3) == '00Q' : false;
-            
             leadw = new LeadWrapper();
+            String[] data = ApexPages.CurrentPage().getparameters().get('locate').split(':');
+            Boolean isZip = (data[0] != null) ? data[0].length() == 5: false;
+            Boolean isRecord = (data[0] != null) ? data[0].length() == 15 || data[0].length() == 18 : false;
+            Boolean isLead = (data[0] != null) ? isRecord && data[0].substring(0,3) == '00Q' : false;
+            Boolean isUser = (data.size()>1) ? (data[1].length() == 15 || data[1].length() == 18) && data[1].substring(0,3) == '005' : false;
+            if (isUser) {
+                User[] users = [SELECT Id FROM User WHERE UserRole.Name LIKE '%Call Center%' AND Id = :data[1]];
+                if (users.size() > 0) {
+                    leadw.cu_callCenterAgent = data[1];
+                }
+            }
             cu_id = 'None';
             if (isZip) {
-                leadw.cu_postalcode = data;
+                leadw.cu_postalcode = data[0];
             } else if (isLead) {
-                Lead[] leads = [select isConverted,FirstName,postalcode,Location__c,LastName,email,MobilePhone,city,street,Product_Interest__c,Marketing_Email_OK__c,Appointment_Date__c,Appointment_Time__c from Lead where id=: data];
+                Lead[] leads = [select isConverted,FirstName,postalcode,Location__c,LastName,email,MobilePhone,city,street,Product_Interest__c,Marketing_Email_OK__c,Appointment_Date__c,Appointment_Time__c from Lead where id=: data[0]];
                 if (leads.size() > 0) {
-                    cu_id = data;
+                    cu_id = data[0];
                     Lead leadRecords = leads.get(0);
                     //leadw.Id = leadRecords.Id;
                     //cu_id = String.valueOf(leadRecords.Id);
@@ -234,9 +241,9 @@ public Without Sharing class AppointmentsController {
                     leadw.cu_isAffirmedConsent = String.valueOf(leadRecords.Marketing_Email_OK__c);
                     leadw.cu_postalcode = leadRecords.postalcode;
                     leadw.cu_territory = leadRecords.Location__c;
-                    /*if(leadRecords.Product_Interest__c != null) {
+                    if(leadRecords.Product_Interest__c != null) {
                         leadw.cu_serviceType = leadRecords.Product_Interest__c;
-                    }*/
+                    }
                     if(leadRecords.isConverted == true) {
                         leadw.cu_appointmentDate = leadRecords.Appointment_Date__c.Month() + '/' + leadRecords.Appointment_Date__c.Day() + '/' +leadRecords.Appointment_Date__c.Year();
                         leadw.cu_appointmentTime = leadRecords.Appointment_Time__c;
@@ -657,7 +664,7 @@ public Without Sharing class AppointmentsController {
     public PageReference doSubmit(){
 
         PageReference pageRef = (Apexpages.currentPage().getParameters().get('redirectTo') != null) ? new PageReference(Apexpages.currentPage().getParameters().get('redirectTo')) : new PageReference('/apex/ThankYouPage');
-        String refSite = (isPavers) ? 'Pavers' : 'Turf';
+        String refSite = (isKitchen) ? 'Kitchen' : 'Bath';
         pageRef.getParameters().put('ref', refSite);
         pageRef.setRedirect(true); 
         
@@ -667,7 +674,7 @@ public Without Sharing class AppointmentsController {
             l.LastName = (leadw.cu_LastName != null)? leadw.cu_LastName : 'BlankLast';
             if (leadw.cu_Email != null) l.Email = leadw.cu_Email;
             if (leadw.cu_PhoneNumber != null) l.MobilePhone = leadw.cu_PhoneNumber;
-            l.Booked_From_VF_Page__c = true;
+            l.Booked_From_VF_Page__c = String.isEmpty(leadw.cu_callCenterAgent);
             l.Booked_From_VF_Page_TimeStamp__c =System.now();
             if (leadw.cu_postalcode != null) l.postalcode = leadw.cu_postalcode;
             if (leadw.cu_city != null) l.City = leadw.cu_city;
@@ -675,10 +682,11 @@ public Without Sharing class AppointmentsController {
         	if (leadw.cu_territory != 'OUT OF TERRITORY') l.Location__c = leadw.cu_territory;
             l.Appointment_Date__c = date.parse(string.valueOf(leadw.cu_appointmentDate));
             l.Appointment_Time__c = (leadw.cu_appointmentTime != null)? leadw.cu_appointmentTime : '';
-            l.Product_Interest__c = (leadw.cu_serviceType != null)? leadw.cu_serviceType : 'Turf';
+            l.Product_Interest__c = (leadw.cu_serviceType != null)? leadw.cu_serviceType : 'Bath';
             if (leadw.cu_isAffirmedConsent != null && leadw.cu_isAffirmedConsent == 'true') { l.Marketing_Email_OK__c = true; }
             l.Status = 'BOOKED APPOINTMENT';
         	if (leadw.cu_howfind != null) l.How_Did_You_Hear_About_Us__c = leadw.cu_howfind;
+        	if (!String.isEmpty(leadw.cu_callCenterAgent)) l.Call_Center_Agent__c = leadw.cu_callCenterAgent;
         
         if (cu_id != null && cu_id != 'None' && cu_id != 'Conv') {
             l.Id = cu_id;

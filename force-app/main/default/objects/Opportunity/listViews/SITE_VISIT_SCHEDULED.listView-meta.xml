@@ -2,25 +2,21 @@
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>SITE_VISIT_SCHEDULED</fullName>
     <columns>Appointment_Date_Time__c</columns>
-    <columns>CORE.USERS.FULL_NAME</columns>
     <columns>Location__c</columns>
     <columns>OPPORTUNITY.NAME</columns>
     <columns>Appointment_Notes__c</columns>
-    <columns>Event_Name__c</columns>
-    <columns>Brand_Ambassador_Name__c</columns>
     <columns>OPPORTUNITY.CREATED_DATE</columns>
-    <columns>ApproxSqFt__c</columns>
     <columns>City__c</columns>
-    <columns>ZIP__c</columns>
     <columns>Opportunity_Type__c</columns>
     <columns>Estimated_Attendees__c</columns>
     <columns>OPPORTUNITY.LEAD_SOURCE</columns>
-    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>Lead_Source_2__c</columns>
+    <columns>Call_Center_Agent__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>OPPORTUNITY.STAGE_NAME</field>
         <operation>equals</operation>
-        <value>SITE VISIT SCHEDULED</value>
+        <value>SITE VISIT SCHEDULED,REHASH APPOINTMENT</value>
     </filters>
-    <label>SITE VISIT SCHEDULED</label>
+    <label>SITE VISIT SCHEDULED_REHASH</label>
 </ListView>

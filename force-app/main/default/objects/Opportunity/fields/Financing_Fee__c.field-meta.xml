@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Financing_Fee__c</fullName>
-    <externalId>false</externalId>
     <formula>CASE( Finance_Program__c ,
 &quot;GL-NV 5yr 12.99% APR&quot;,0.00,
 &quot;GL-NV 10yr 12.99% APR&quot;,0.00,
@@ -35,6 +34,5 @@ NULL
     <required>false</required>
     <scale>2</scale>
     <trackHistory>false</trackHistory>
-    <trackTrending>false</trackTrending>
     <type>Percent</type>
 </CustomField>

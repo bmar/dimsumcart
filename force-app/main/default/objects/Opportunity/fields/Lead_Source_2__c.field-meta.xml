@@ -2,22 +2,44 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Lead_Source_2__c</fullName>
     <description>Only Marketing Manager to edit this list of sources</description>
-    <externalId>false</externalId>
     <inlineHelpText>See documentation regarding lead source tagging if you&apos;re unsure of the correct answer.</inlineHelpText>
     <label>Lead Source 2</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
-    <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <restricted>false</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
+            <value>
+                <fullName>ANGI ADS TMP</fullName>
+                <default>false</default>
+                <label>ANGI ADS TMP</label>
+            </value>
+            <value>
+                <fullName>APPT SCHEDULER ALL</fullName>
+                <default>false</default>
+                <label>APPT SCHEDULER ALL</label>
+            </value>
+            <value>
+                <fullName>APPT SETTER ALL</fullName>
+                <default>false</default>
+                <label>APPT SETTER ALL</label>
+            </value>
+            <value>
+                <fullName>BLUE FIRE ADS TMP</fullName>
+                <default>false</default>
+                <label>BLUE FIRE ADS TMP</label>
+            </value>
             <value>
                 <fullName>BOOKED APPOINTMENT</fullName>
                 <default>false</default>
                 <label>BOOKED APPOINTMENT</label>
+            </value>
+            <value>
+                <fullName>CANVASSING TMP</fullName>
+                <default>false</default>
+                <label>CANVASSING TMP</label>
             </value>
             <value>
                 <fullName>CUSTOMER CALLBACK</fullName>
@@ -25,9 +47,24 @@
                 <label>CUSTOMER CALLBACK</label>
             </value>
             <value>
-                <fullName>EMAIL MARKETING</fullName>
+                <fullName>CUSTOMER CALLBACK 813</fullName>
                 <default>false</default>
-                <label>EMAIL MARKETING</label>
+                <label>CUSTOMER CALLBACK 813</label>
+            </value>
+            <value>
+                <fullName>DIGITAL BILLBOARD TMP</fullName>
+                <default>false</default>
+                <label>DIGITAL BILLBOARD TMP</label>
+            </value>
+            <value>
+                <fullName>DOOR HANGERS TMP</fullName>
+                <default>false</default>
+                <label>DOOR HANGERS TMP</label>
+            </value>
+            <value>
+                <fullName>EMAIL MARKETING ALL</fullName>
+                <default>false</default>
+                <label>EMAIL MARKETING ALL</label>
             </value>
             <value>
                 <fullName>EVENTS</fullName>
@@ -35,9 +72,74 @@
                 <label>EVENTS</label>
             </value>
             <value>
+                <fullName>EVENTS HOME SHOWS TMP</fullName>
+                <default>false</default>
+                <label>EVENTS HOME SHOWS TMP</label>
+            </value>
+            <value>
+                <fullName>EVENTS TMP</fullName>
+                <default>false</default>
+                <label>EVENTS TMP</label>
+            </value>
+            <value>
+                <fullName>FB ADS CONV TMP</fullName>
+                <default>false</default>
+                <label>FB ADS CONV TMP</label>
+            </value>
+            <value>
+                <fullName>FB ADS LEAD GEN ROOF TMP</fullName>
+                <default>false</default>
+                <label>FB ADS LEAD GEN ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>FB ADS LEAD GEN TMP</fullName>
+                <default>false</default>
+                <label>FB ADS LEAD GEN TMP</label>
+            </value>
+            <value>
+                <fullName>FB ADS TMP</fullName>
+                <default>false</default>
+                <label>FB ADS TMP</label>
+            </value>
+            <value>
+                <fullName>HOME ADVISOR ADS TMP</fullName>
+                <default>false</default>
+                <label>HOME ADVISOR ADS TMP</label>
+            </value>
+            <value>
+                <fullName>HOME BUDDY ADS TMP</fullName>
+                <default>false</default>
+                <label>HOME BUDDY ADS TMP</label>
+            </value>
+            <value>
+                <fullName>HOUZZ ADS TMP</fullName>
+                <default>false</default>
+                <label>HOUZZ ADS TMP</label>
+            </value>
+            <value>
+                <fullName>LEND HOME TMP</fullName>
+                <default>false</default>
+                <label>LEND HOME TMP</label>
+            </value>
+            <value>
+                <fullName>LOCAL SEO GMB TMP</fullName>
+                <default>false</default>
+                <label>LOCAL SEO GMB TMP</label>
+            </value>
+            <value>
                 <fullName>MANUAL ENTRY</fullName>
                 <default>false</default>
                 <label>MANUAL ENTRY</label>
+            </value>
+            <value>
+                <fullName>MANUAL ENTRY ALL</fullName>
+                <default>false</default>
+                <label>MANUAL ENTRY ALL</label>
+            </value>
+            <value>
+                <fullName>MISC MARKETING MAGNET ALL</fullName>
+                <default>false</default>
+                <label>MISC MARKETING MAGNET ALL</label>
             </value>
             <value>
                 <fullName>ORGANIC SEO ALL</fullName>
@@ -45,9 +147,389 @@
                 <label>ORGANIC SEO ALL</label>
             </value>
             <value>
+                <fullName>PFP BATHROOM DESIGN QUOTE TMP</fullName>
+                <default>false</default>
+                <label>PFP BATHROOM DESIGN QUOTE TMP</label>
+            </value>
+            <value>
+                <fullName>PFP ELOCAL 727 TMP</fullName>
+                <default>false</default>
+                <label>PFP ELOCAL 727 TMP</label>
+            </value>
+            <value>
+                <fullName>PFP ELOCAL 813 TMP</fullName>
+                <default>false</default>
+                <label>PFP ELOCAL 813 TMP</label>
+            </value>
+            <value>
+                <fullName>PPC BING BRAND TMP</fullName>
+                <default>false</default>
+                <label>PPC BING BRAND TMP</label>
+            </value>
+            <value>
+                <fullName>PPC BING CALL ONLY TMP</fullName>
+                <default>false</default>
+                <label>PPC BING CALL ONLY TMP</label>
+            </value>
+            <value>
+                <fullName>PPC BING COMP TMP</fullName>
+                <default>false</default>
+                <label>PPC BING COMP TMP</label>
+            </value>
+            <value>
+                <fullName>PPC BING TMP</fullName>
+                <default>false</default>
+                <label>PPC BING TMP</label>
+            </value>
+            <value>
+                <fullName>PPC BRAND TMP</fullName>
+                <default>false</default>
+                <label>PPC BRAND TMP</label>
+            </value>
+            <value>
+                <fullName>PPC CALL ONLY TMP</fullName>
+                <default>false</default>
+                <label>PPC CALL ONLY TMP</label>
+            </value>
+            <value>
+                <fullName>PPC CATCHALL ALL</fullName>
+                <default>false</default>
+                <label>PPC CATCHALL ALL</label>
+            </value>
+            <value>
+                <fullName>PPC COMP TMP</fullName>
+                <default>false</default>
+                <label>PPC COMP TMP</label>
+            </value>
+            <value>
+                <fullName>PPC HURRICANE TMP</fullName>
+                <default>false</default>
+                <label>PPC HURRICANE TMP</label>
+            </value>
+            <value>
+                <fullName>PPC LSA TMP</fullName>
+                <default>false</default>
+                <label>PPC LSA TMP</label>
+            </value>
+            <value>
+                <fullName>PPC ROOF TMP</fullName>
+                <default>false</default>
+                <label>PPC ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>PPC TMP</fullName>
+                <default>false</default>
+                <label>PPC TMP</label>
+            </value>
+            <value>
+                <fullName>PREVIOUS CUSTOMER TMP</fullName>
+                <default>false</default>
+                <label>PREVIOUS CUSTOMER TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT BEACON BELLEAIR TMP</fullName>
+                <default>false</default>
+                <label>PRINT BEACON BELLEAIR TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT BEACON CARROLLWOOD TMP</fullName>
+                <default>false</default>
+                <label>PRINT BEACON CARROLLWOOD TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT BEACON DUNEDIN TMP</fullName>
+                <default>false</default>
+                <label>PRINT BEACON DUNEDIN TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT BEACON PINELLAS TMP</fullName>
+                <default>false</default>
+                <label>PRINT BEACON PINELLAS TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT BEACON SEMINOLE TMP</fullName>
+                <default>false</default>
+                <label>PRINT BEACON SEMINOLE TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT BEST DEAL BOOK 727 ROOF TMP</fullName>
+                <default>false</default>
+                <label>PRINT BEST DEAL BOOK 727 ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT BEST DEAL BOOK 727 TMP</fullName>
+                <default>false</default>
+                <label>PRINT BEST DEAL BOOK 727 TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT BEST DEAL BOOK 813 ROOF TMP</fullName>
+                <default>false</default>
+                <label>PRINT BEST DEAL BOOK 813 ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT BEST DEAL BOOK 813 TMP</fullName>
+                <default>false</default>
+                <label>PRINT BEST DEAL BOOK 813 TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT BEST DEAL BOOK 941 ROOF SAR</fullName>
+                <default>false</default>
+                <label>PRINT BEST DEAL BOOK 941 ROOF SAR</label>
+            </value>
+            <value>
+                <fullName>PRINT BEST DEAL BOOK 941 SAR</fullName>
+                <default>false</default>
+                <label>PRINT BEST DEAL BOOK 941 SAR</label>
+            </value>
+            <value>
+                <fullName>PRINT CATCHALL ALL</fullName>
+                <default>false</default>
+                <label>PRINT CATCHALL ALL</label>
+            </value>
+            <value>
+                <fullName>PRINT HOME CONCEPTS TMP</fullName>
+                <default>false</default>
+                <label>PRINT HOME CONCEPTS TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT HOME IMPROV 727 ROOF TMP</fullName>
+                <default>false</default>
+                <label>PRINT HOME IMPROV 727 ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT HOME IMPROV 727 TMP</fullName>
+                <default>false</default>
+                <label>PRINT HOME IMPROV 727 TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT HOME IMPROV 813 ROOF TMP</fullName>
+                <default>false</default>
+                <label>PRINT HOME IMPROV 813 ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT HOME IMPROV 813 TMP</fullName>
+                <default>false</default>
+                <label>PRINT HOME IMPROV 813 TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT HOME IMPROV 941 ROOF SAR</fullName>
+                <default>false</default>
+                <label>PRINT HOME IMPROV 941 ROOF SAR</label>
+            </value>
+            <value>
+                <fullName>PRINT HOME IMPROV 941 SAR</fullName>
+                <default>false</default>
+                <label>PRINT HOME IMPROV 941 SAR</label>
+            </value>
+            <value>
+                <fullName>PRINT HOME MAG 727 ROOF TMP</fullName>
+                <default>false</default>
+                <label>PRINT HOME MAG 727 ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT HOME MAG 727 TMP</fullName>
+                <default>false</default>
+                <label>PRINT HOME MAG 727 TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT HOME MAG 813 ROOF TMP</fullName>
+                <default>false</default>
+                <label>PRINT HOME MAG 813 ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT HOME MAG 813 TMP</fullName>
+                <default>false</default>
+                <label>PRINT HOME MAG 813 TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT HOME MAG 941 SAR</fullName>
+                <default>false</default>
+                <label>PRINT HOME MAG 941 SAR</label>
+            </value>
+            <value>
+                <fullName>PRINT HOME MAG INSERT 727 TMP</fullName>
+                <default>false</default>
+                <label>PRINT HOME MAG INSERT 727 TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT HOME MAG INSERT 813 TMP</fullName>
+                <default>false</default>
+                <label>PRINT HOME MAG INSERT 813 TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT HYPERTARGETED DIRECT MAIL TMP</fullName>
+                <default>false</default>
+                <label>PRINT HYPERTARGETED DIRECT MAIL TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT LUXURY AND LEISURE TMP</fullName>
+                <default>false</default>
+                <label>PRINT LUXURY AND LEISURE TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT MAILER TMP</fullName>
+                <default>false</default>
+                <label>PRINT MAILER TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT NEW TAMPA NEWS 813 ROOF TMP</fullName>
+                <default>false</default>
+                <label>PRINT NEW TAMPA NEWS 813 ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT NEW TAMPA NEWS 813 TMP</fullName>
+                <default>false</default>
+                <label>PRINT NEW TAMPA NEWS 813 TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT TAMPA BAY MAG TMP</fullName>
+                <default>false</default>
+                <label>PRINT TAMPA BAY MAG TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT TAMPA BAY TIMES 727 ROOF TMP</fullName>
+                <default>false</default>
+                <label>PRINT TAMPA BAY TIMES 727 ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT TAMPA BAY TIMES 813 ROOF TMP</fullName>
+                <default>false</default>
+                <label>PRINT TAMPA BAY TIMES 813 ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT TAMPA BAY TIMES INSERT 727 TMP</fullName>
+                <default>false</default>
+                <label>PRINT TAMPA BAY TIMES INSERT 727 TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT TAMPA BAY TIMES INSERT 813 TMP</fullName>
+                <default>false</default>
+                <label>PRINT TAMPA BAY TIMES INSERT 813 TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT TAMPA BAY TIMES TMP</fullName>
+                <default>false</default>
+                <label>PRINT TAMPA BAY TIMES TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT TBT AROUND THE HOME 727 TMP</fullName>
+                <default>false</default>
+                <label>PRINT TBT AROUND THE HOME 727 TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT TBT BAY MAG TMP</fullName>
+                <default>false</default>
+                <label>PRINT TBT BAY MAG TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT TBT HOME IMPROV 352 TMP</fullName>
+                <default>false</default>
+                <label>PRINT TBT HOME IMPROV 352 TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT TBT UNREAL ESTATE TMP</fullName>
+                <default>false</default>
+                <label>PRINT TBT UNREAL ESTATE TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT UNKNOWN ALL</fullName>
+                <default>false</default>
+                <label>PRINT UNKNOWN ALL</label>
+            </value>
+            <value>
+                <fullName>PRINT UPSCALE MAG TMP</fullName>
+                <default>false</default>
+                <label>PRINT UPSCALE MAG TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT WESLEY CHAPEL NEWS 813 ROOF TMP</fullName>
+                <default>false</default>
+                <label>PRINT WESLEY CHAPEL NEWS 813 ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>PRINT WESLEY CHAPEL NEWS 813 TMP</fullName>
+                <default>false</default>
+                <label>PRINT WESLEY CHAPEL NEWS 813 TMP</label>
+            </value>
+            <value>
+                <fullName>QUINSTREET ADS TMP</fullName>
+                <default>false</default>
+                <label>QUINSTREET ADS TMP</label>
+            </value>
+            <value>
+                <fullName>RADIO UNKNOWN ALL</fullName>
+                <default>false</default>
+                <label>RADIO UNKNOWN ALL</label>
+            </value>
+            <value>
+                <fullName>RADIO WCTQ SAR</fullName>
+                <default>false</default>
+                <label>RADIO WCTQ SAR</label>
+            </value>
+            <value>
+                <fullName>RADIO WDAE ROOF TMP</fullName>
+                <default>false</default>
+                <label>RADIO WDAE ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>RADIO WDAE TMP</fullName>
+                <default>false</default>
+                <label>RADIO WDAE TMP</label>
+            </value>
+            <value>
+                <fullName>RADIO WFLA ROOF TMP</fullName>
+                <default>false</default>
+                <label>RADIO WFLA ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>RADIO WFLA TMP</fullName>
+                <default>false</default>
+                <label>RADIO WFLA TMP</label>
+            </value>
+            <value>
+                <fullName>RADIO WFUS TMP</fullName>
+                <default>false</default>
+                <label>RADIO WFUS TMP</label>
+            </value>
+            <value>
+                <fullName>RADIO WRBQ TMP</fullName>
+                <default>false</default>
+                <label>RADIO WRBQ TMP</label>
+            </value>
+            <value>
+                <fullName>RADIO WSRZ TMP</fullName>
+                <default>false</default>
+                <label>RADIO WSRZ TMP</label>
+            </value>
+            <value>
                 <fullName>REFERRAL ALL</fullName>
                 <default>false</default>
                 <label>REFERRAL ALL</label>
+            </value>
+            <value>
+                <fullName>REFERRAL BATH PLANET TMP</fullName>
+                <default>false</default>
+                <label>REFERRAL BATH PLANET TMP</label>
+            </value>
+            <value>
+                <fullName>REFERRAL BBB TMP</fullName>
+                <default>false</default>
+                <label>REFERRAL BBB TMP</label>
+            </value>
+            <value>
+                <fullName>REFERRAL BCI ACRYLIC TMP</fullName>
+                <default>false</default>
+                <label>REFERRAL BCI ACRYLIC TMP</label>
+            </value>
+            <value>
+                <fullName>REFERRAL TMP</fullName>
+                <default>false</default>
+                <label>REFERRAL TMP</label>
+            </value>
+            <value>
+                <fullName>REHASH CUSTOMER TMP</fullName>
+                <default>false</default>
+                <label>REHASH CUSTOMER TMP</label>
             </value>
             <value>
                 <fullName>REP SELF GENERATED ALL</fullName>
@@ -55,14 +537,109 @@
                 <label>REP SELF GENERATED ALL</label>
             </value>
             <value>
+                <fullName>REP SELF GENERATED TMP</fullName>
+                <default>false</default>
+                <label>REP SELF GENERATED TMP</label>
+            </value>
+            <value>
+                <fullName>SALES PKG TMP</fullName>
+                <default>false</default>
+                <label>SALES PKG TMP</label>
+            </value>
+            <value>
+                <fullName>SHOWROOM WALK-IN TMP</fullName>
+                <default>false</default>
+                <label>SHOWROOM WALK-IN TMP</label>
+            </value>
+            <value>
                 <fullName>SOCIAL MEDIA ALL</fullName>
                 <default>false</default>
                 <label>SOCIAL MEDIA ALL</label>
             </value>
             <value>
+                <fullName>TARGETED STREAMING TMP</fullName>
+                <default>false</default>
+                <label>TARGETED STREAMING TMP</label>
+            </value>
+            <value>
+                <fullName>TRUCK TMP</fullName>
+                <default>false</default>
+                <label>TRUCK TMP</label>
+            </value>
+            <value>
+                <fullName>TV UNKNOWN ALL</fullName>
+                <default>false</default>
+                <label>TV UNKNOWN ALL</label>
+            </value>
+            <value>
+                <fullName>TV WFLA ROOF TMP</fullName>
+                <default>false</default>
+                <label>TV WFLA ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>TV WFLA TMP</fullName>
+                <default>false</default>
+                <label>TV WFLA TMP</label>
+            </value>
+            <value>
+                <fullName>TV WFTS ROOF TMP</fullName>
+                <default>false</default>
+                <label>TV WFTS ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>TV WFTS TMP</fullName>
+                <default>false</default>
+                <label>TV WFTS TMP</label>
+            </value>
+            <value>
+                <fullName>TV WTOG ROOF TMP</fullName>
+                <default>false</default>
+                <label>TV WTOG ROOF TMP</label>
+            </value>
+            <value>
+                <fullName>TV WTOG TMP</fullName>
+                <default>false</default>
+                <label>TV WTOG TMP</label>
+            </value>
+            <value>
+                <fullName>WEBSITE CONTACT US ALL</fullName>
+                <default>false</default>
+                <label>WEBSITE CONTACT US ALL</label>
+            </value>
+            <value>
+                <fullName>WEBSITE LC TMP</fullName>
+                <default>false</default>
+                <label>WEBSITE LC TMP</label>
+            </value>
+            <value>
                 <fullName>WEBSITE MAIN ALL</fullName>
                 <default>false</default>
                 <label>WEBSITE MAIN ALL</label>
+            </value>
+            <value>
+                <fullName>WEBSITE MAIN TMP</fullName>
+                <default>false</default>
+                <label>WEBSITE MAIN TMP</label>
+            </value>
+            <value>
+                <fullName>WELCOME WAGON TMP</fullName>
+                <default>false</default>
+                <label>WELCOME WAGON TMP</label>
+            </value>
+            <value>
+                <fullName>YARD SIGN TMP</fullName>
+                <default>false</default>
+                <label>YARD SIGN TMP</label>
+            </value>
+            <value>
+                <fullName>YELP CTA TMP</fullName>
+                <default>false</default>
+                <label>YELP CTA TMP</label>
+            </value>
+            <value>
+                <fullName>YOUTUBE DEMANDGEN TMP</fullName>
+                <default>false</default>
+                <label>YOUTUBE DEMANDGEN TMP</label>
             </value>
         </valueSetDefinition>
     </valueSet>

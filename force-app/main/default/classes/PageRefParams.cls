@@ -6,10 +6,10 @@
  * @last modified by  : Bradford Mar
 **/
 public Without Sharing class PageRefParams {
-    public Boolean isPavers{get;set;}
+    public Boolean isKitchen{get;set;}
     public Boolean isOOT{get;set;}
     public PageRefParams() {
-        isPavers = (ApexPages.currentPage().getParameters().get('ref') == 'Pavers') ? true : false;
+        isKitchen = (ApexPages.currentPage().getParameters().get('ref') == 'Kitchen') ? true : false;
         isOOT = (ApexPages.currentPage().getParameters().get('terr') != null && ApexPages.currentPage().getParameters().get('terr') == 'oot') ? true : false;
     }
 }

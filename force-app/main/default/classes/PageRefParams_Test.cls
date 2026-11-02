@@ -12,7 +12,7 @@ public class PageRefParams_Test {
     {
         test.startTest();
         PageRefParams a = new PageRefParams();
-        a.isPavers = true;
+        a.isKitchen = true;
         a.isOOT = true;
         test.stopTest();
     }
